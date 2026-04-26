@@ -1,7 +1,5 @@
 *-----------------------------------------------------------
 * Title      : Graphics
-* Written by : Bill Sellinger
-* Date       : 05/15/2024
 * Description: Write code to draw graphical elements
 
 * In this exercise, write code to draw different 
