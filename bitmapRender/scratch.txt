@@ -1,0 +1,72 @@
+;Registers
+    ;Data
+    ;d0-2 = temp
+    ;d3 = x
+    ;d4 = y
+    ;d5 = rowLength (in pixels)
+    ;d6 = fullRowLength (in bytes)
+    ;d7 = byteDepth
+    
+    ;Address
+	;a4 = rowLength (in bytes)
+    ;a5 = iPixel
+    ;a6 = Bitmap File Start
+	
+	;Color Value Order = BGR
+
+Arguments
+	bpmAddress
+	xSprite
+	ySprite
+	wSprite
+	hSprite
+	xDisplay
+	yDisplay
+	
+Drawing Constants
+	byteDepth = from bmp, converted
+	xPenStart = xDisplay + wSprite
+	iPixelIncrement = rowWidthBytes + (wSprite * byteDepth)		
+	
+Drawing Dynamics	
+	xPen = xDisplay + wSprite, decrements
+	yPen = yDisplay + hSprite, decrements
+	iPixel = xPixel + (yPixel * rowWidthBytes)	
+		xPixel = (xSprite + wSprite) * byteDepth
+		yPixel = (hBitmap - (ySprite + hSprite))	;from bottom instead of top		
+		rowWidthBytes = (wBitmap * byteDepth) + paddingBytes
+
+Subroutines
+	Set Pen Color
+	Draw Pixel
+	
+Routine
+
+d7	Get ByteDepth
+d6	Get xPenStart
+d5	Get iPixelIncrement
+
+d4	Get xPen
+d3	Get yPen
+d2	Get iPixel
+	
+ColumnLoop
+	
+	xPen += wSprite
+	iPixel +=
+	iPixel += xPixel
+	
+	RowLoop
+		xPen--
+		iPixel -= byteDepth
+		
+		SetPenColor
+		
+		DrawPixel
+		
+		compare xPen to xDisplay
+		branch if not equal RowLoop
+	
+	yPen--
+	compare yPen to yDisplay
+	branch if Less Than to ColumnLoop
