@@ -4,5 +4,17 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"cSpell.words": [
+			"dbra",
+			"divu",
+			"INCBIN",
+			"movem",
+			"mulu",
+			"randdata",
+			"Regs",
+			"SIMHALT",
+			"WASD"
+		]
+	}
 }

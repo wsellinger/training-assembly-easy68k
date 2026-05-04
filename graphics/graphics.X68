@@ -479,7 +479,7 @@ MovingBoxUpdate
     trap    #SimulatorControlTrapCode           ;Draw Rect
 
 WasdInputLoopStart   
-    move.l  #KeyCodeW<<24+KeyCodeA<<16+KeyCodeS<<8+KeyCodeD,D1  ;Pack keycodes for WSAD
+    move.l  #KeyCodeW<<24+KeyCodeA<<16+KeyCodeS<<8+KeyCodeD,D1  ;Pack keycodes for WASD
 
     move.b  #ReadKeyCurrentStateTask,d0
     trap    #SimulatorControlTrapCode

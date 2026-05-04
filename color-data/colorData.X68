@@ -143,7 +143,7 @@ DrawPixelLoopEnd
     beq     ColorBlockLoopEnd               ;End Program
     
     move.b  #1,d7                           ;Set flag for long block instead of byte block
-    bra     ColorBlockInit                  ;Reinit and Loop
+    bra     ColorBlockInit                  ;Re-init and Loop
 
 ColorBlockLoopEnd
 

@@ -15,7 +15,7 @@
 
 *   - On a new line, prompt the user for a string. Save this string 
 *       into a memory location with a new label you create.
-*       Note: make sure you can accomdate the maximum input noted size
+*       Note: make sure you can accommodate the maximum input noted size
 *       in the Sim68K Text I/O in Help)
 
 *   - On a new line, prompt the user for a letter. Continue to prompt
@@ -223,7 +223,7 @@ NumberGuessEnd
     trap    #SimulatorControlTrapCode    
 
 WasdInputLoopStart   
-    move.l  #KeyCodeW<<24+KeyCodeA<<16+KeyCodeS<<8+KeyCodeD,D1  ;Pack keycodes for WSAD
+    move.l  #KeyCodeW<<24+KeyCodeA<<16+KeyCodeS<<8+KeyCodeD,D1  ;Pack keycodes for WASD
 
     move.b  #ReadKeyCurrentStateTask,d0
     trap    #SimulatorControlTrapCode
@@ -365,7 +365,7 @@ ArrowInputPromptString      dc.b 'Press An Arrow Key',0
 ArrowInputLeftString        dc.b 'Left',0
 ArrowInputRightString       dc.b 'Right',0
 ArrowInputUpString          dc.b 'Up',0
-ArrowInputdownString        dc.b 'Down',0
+ArrowInputDownString        dc.b 'Down',0
     END    START
 
 

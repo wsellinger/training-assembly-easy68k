@@ -26,10 +26,10 @@
 *
 * Stack: 
 *     Subroutines prepended with 's' are fully register scoped and transfer arguments and return
-*     values via the stack. These are more suitible for logic that the uses a lot of registers or 
+*     values via the stack. These are more suitable for logic that the uses a lot of registers or 
 *     requires a lot of arguments. Stack Subroutines should prioritize use of the upper registers 
-*     (starting at the top and working downward) for persistant data and leave the lower registers
-*     (starting at 0 and working upward) for temporary datamanipulation, trap codes, and Register 
+*     (starting at the top and working downward) for persistent data and leave the lower registers
+*     (starting at 0 and working upward) for temporary data manipulation, trap codes, and Register 
 *      Subroutines
 *
 * Labels:
